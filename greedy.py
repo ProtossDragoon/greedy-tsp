@@ -36,7 +36,7 @@ def greedy_path(verbose=False):
     while True:
         possible_routes = []
         if verbose:
-            print('------')
+            print("------")
             print(f"회사 {start_corp} 에서 갈 수 있는 회사들:")
         for path in data_set:
             if start_corp in path["corp_start"]:
@@ -49,8 +49,8 @@ def greedy_path(verbose=False):
                     possible_routes.append(path)
         if not possible_routes:
             if verbose:
-                print('더 이상 갈 수 있는 회사가 없습니다. 여행을 종료합니다.')
-                print('------')
+                print("더 이상 갈 수 있는 회사가 없습니다. 여행을 종료합니다.")
+                print("------")
             break
         # 다음으로 방문할 수 있는 회사들 중에서 가장 짧은 거리의 회사를 선택합니다.
         route = get_shortest_route(possible_routes)
